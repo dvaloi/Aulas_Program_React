@@ -1,0 +1,1329 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Página Publicitária</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= CABEÇALHO ================= -->
+    <header class="topo">
+
+        <div class="logo">
+            <span>🐄</span>
+            <strong>AGRO SISTEMA</strong>
+        </div>
+
+        <nav class="menu">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+
+            <button class="btn-login" onclick="abrirLogin()">
+                Entrar
+            </button>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= PUBLICIDADE ================= -->
+    <main id="inicio">
+
+        <section class="hero">
+
+            <div class="hero-conteudo">
+
+                <span class="subtitulo">
+                    SOLUÇÃO INTELIGENTE PARA O SEU NEGÓCIO
+                </span>
+
+                <h1>
+                    Gestão moderna,
+                    <span>simples e eficiente</span>
+                </h1>
+
+                <p>
+                    Controle os seus animais, informações,
+                    operações e processos de forma simples,
+                    rápida e segura.
+                </p>
+
+                <div class="hero-botoes">
+
+                    <button class="btn-principal"
+                            onclick="abrirLogin()">
+                        Acessar Sistema
+                    </button>
+
+                    <a href="#servicos" class="btn-secundario">
+                        Saber mais
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARROSSEL -->
+            <div class="slider">
+
+                <div class="slide ativo">
+                    <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=1000&q=80"
+                         alt="Animais">
+                </div>
+
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?auto=format&fit=crop&w=1000&q=80"
+                         alt="Agricultura">
+                </div>
+
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1000&q=80"
+                         alt="Fazenda">
+                </div>
+
+                <button class="slider-btn anterior"
+                        onclick="mudarSlide(-1)">
+                    ❮
+                </button>
+
+                <button class="slider-btn seguinte"
+                        onclick="mudarSlide(1)">
+                    ❯
+                </button>
+
+                <div class="indicadores">
+
+                    <span class="indicador ativo"
+                          onclick="irParaSlide(0)">
+                    </span>
+
+                    <span class="indicador"
+                          onclick="irParaSlide(1)">
+                    </span>
+
+                    <span class="indicador"
+                          onclick="irParaSlide(2)">
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SERVIÇOS ================= -->
+
+        <section id="servicos" class="servicos">
+
+            <div class="titulo-secao">
+
+                <span>POR QUE ESCOLHER?</span>
+
+                <h2>
+                    Uma plataforma feita para facilitar
+                </h2>
+
+            </div>
+
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <div class="icone">
+                        📊
+                    </div>
+
+                    <h3>
+                        Gestão
+                    </h3>
+
+                    <p>
+                        Organize e acompanhe todas as
+                        informações do seu negócio.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="icone">
+                        🐄
+                    </div>
+
+                    <h3>
+                        Cadastro de Animais
+                    </h3>
+
+                    <p>
+                        Registe e consulte facilmente os
+                        seus animais.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="icone">
+                        🔒
+                    </div>
+
+                    <h3>
+                        Segurança
+                    </h3>
+
+                    <p>
+                        Os seus dados ficam protegidos e
+                        organizados.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="icone">
+                        📱
+                    </div>
+
+                    <h3>
+                        Responsivo
+                    </h3>
+
+                    <p>
+                        Utilize o sistema no computador,
+                        tablet ou telemóvel.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= RODAPÉ ================= -->
+
+    <footer>
+
+        <strong>AGRO SISTEMA</strong>
+
+        <span>
+            © 2026 - Todos os direitos reservados
+        </span>
+
+    </footer>
+
+
+    <!-- ================= MODAL LOGIN ================= -->
+
+    <div id="modalLogin" class="modal">
+
+        <div class="login-container">
+
+            <!-- botão fechar -->
+
+            <button class="fechar"
+                    onclick="fecharLogin()">
+                ×
+            </button>
+
+
+            <div class="login-header">
+
+                <div class="login-logo">
+                    🔐
+                </div>
+
+                <h2>
+                    Bem-vindo
+                </h2>
+
+                <p>
+                    Entre na sua conta para continuar
+                </p>
+
+            </div>
+
+
+            <form id="formLogin"
+                  onsubmit="fazerLogin(event)">
+
+                <div class="campo">
+
+                    <label>
+                        Utilizador
+                    </label>
+
+                    <input
+                        type="text"
+                        id="utilizador"
+                        placeholder="Digite o utilizador"
+                        required>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label>
+                        Palavra-passe
+                    </label>
+
+                    <div class="senha">
+
+                        <input
+                            type="password"
+                            id="senha"
+                            placeholder="Digite a palavra-passe"
+                            required>
+
+                        <button
+                            type="button"
+                            onclick="mostrarSenha()">
+                            👁
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="opcoes">
+
+                    <label>
+                        <input type="checkbox">
+                        Lembrar-me
+                    </label>
+
+                    <a href="#">
+                        Esqueceu a senha?
+                    </a>
+
+                </div>
+
+
+                <button type="submit"
+                        class="btn-entrar">
+
+                    Entrar
+
+                </button>
+
+
+                <div id="mensagem"
+                     class="mensagem">
+                </div>
+
+            </form>
+
+
+            <div class="login-footer">
+
+                Ainda não possui uma conta?
+
+                <a href="#">
+                    Criar conta
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script >
+	
+// =================================================
+// CARROSSEL
+// =================================================
+
+let slideAtual = 0;
+
+const slides = document.querySelectorAll(".slide");
+const indicadores = document.querySelectorAll(".indicador");
+
+
+function mostrarSlide(numero) {
+
+    slides.forEach(slide => {
+        slide.classList.remove("ativo");
+    });
+
+    indicadores.forEach(indicador => {
+        indicador.classList.remove("ativo");
+    });
+
+    slides[numero].classList.add("ativo");
+    indicadores[numero].classList.add("ativo");
+
+    slideAtual = numero;
+}
+
+
+// =================================================
+// PRÓXIMO / ANTERIOR
+// =================================================
+
+function mudarSlide(direcao) {
+
+    slideAtual += direcao;
+
+    if (slideAtual >= slides.length) {
+        slideAtual = 0;
+    }
+
+    if (slideAtual < 0) {
+        slideAtual = slides.length - 1;
+    }
+
+    mostrarSlide(slideAtual);
+}
+
+
+// =================================================
+// IR PARA SLIDE
+// =================================================
+
+function irParaSlide(numero) {
+
+    mostrarSlide(numero);
+
+}
+
+
+// =================================================
+// SLIDE AUTOMÁTICO
+// =================================================
+
+setInterval(() => {
+
+    mudarSlide(1);
+
+}, 5000);
+
+
+// =================================================
+// ABRIR LOGIN
+// =================================================
+
+function abrirLogin() {
+
+    const modal = document.getElementById("modalLogin");
+
+    modal.classList.add("ativo");
+
+    document.body.style.overflow = "hidden";
+
+    setTimeout(() => {
+
+        document.getElementById("utilizador").focus();
+
+    }, 200);
+
+}
+
+
+// =================================================
+// FECHAR LOGIN
+// =================================================
+
+function fecharLogin() {
+
+    const modal = document.getElementById("modalLogin");
+
+    modal.classList.remove("ativo");
+
+    document.body.style.overflow = "auto";
+
+}
+
+
+// =================================================
+// FECHAR CLICANDO FORA
+// =================================================
+
+document.getElementById("modalLogin")
+    .addEventListener("click", function(event) {
+
+        if (event.target === this) {
+
+            fecharLogin();
+
+        }
+
+    });
+
+
+// =================================================
+// TECLA ESC
+// =================================================
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+
+        fecharLogin();
+
+    }
+
+});
+
+
+// =================================================
+// MOSTRAR / OCULTAR SENHA
+// =================================================
+
+function mostrarSenha() {
+
+    const senha =
+        document.getElementById("senha");
+
+    if (senha.type === "password") {
+
+        senha.type = "text";
+
+    } else {
+
+        senha.type = "password";
+
+    }
+
+}
+
+
+// =================================================
+// LOGIN
+// =================================================
+
+function fazerLogin(event) {
+
+    event.preventDefault();
+
+    const utilizador =
+        document.getElementById("utilizador").value;
+
+    const senha =
+        document.getElementById("senha").value;
+
+    const mensagem =
+        document.getElementById("mensagem");
+
+
+    // Exemplo de validação
+    // Aqui posteriormente pode conectar
+    // com a sua API ASP.NET Core.
+
+    if (utilizador === "admin" && senha === "1234") {
+
+        mensagem.style.color = "#198754";
+
+        mensagem.innerHTML =
+            "✓ Login efetuado com sucesso!";
+
+        setTimeout(() => {
+
+            fecharLogin();
+
+            // Exemplo:
+            // window.location.href = "dashboard.html";
+
+        }, 1000);
+
+    } else {
+
+        mensagem.style.color = "#dc3545";
+
+        mensagem.innerHTML =
+            "✕ Utilizador ou palavra-passe incorreta.";
+
+    }
+
+}
+	</script>
+
+</body>
+</html>
+
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+
+/* ================= TOPO ================= */
+
+.topo {
+    height: 70px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: white;
+
+    box-shadow: 0 2px 15px rgba(0,0,0,.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #174a7c;
+    font-size: 19px;
+}
+
+.logo span {
+    font-size: 30px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu a {
+    color: #444;
+    text-decoration: none;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.menu a:hover {
+    color: #1769aa;
+}
+
+
+/* BOTÃO LOGIN */
+
+.btn-login,
+.btn-principal,
+.btn-entrar {
+    border: none;
+    cursor: pointer;
+
+    background: #1769aa;
+    color: white;
+
+    border-radius: 10px;
+
+    transition: .3s;
+}
+
+.btn-login {
+    padding: 11px 22px;
+}
+
+.btn-login:hover,
+.btn-principal:hover,
+.btn-entrar:hover {
+    background: #0e4d80;
+    transform: translateY(-2px);
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 620px;
+
+    padding: 70px 6%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 60px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef5fa,
+            #ffffff
+        );
+}
+
+.hero-conteudo {
+    max-width: 600px;
+}
+
+.subtitulo {
+    color: #1769aa;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin-top: 18px;
+
+    font-size: clamp(38px, 5vw, 65px);
+
+    line-height: 1.05;
+
+    color: #172b3a;
+}
+
+.hero h1 span {
+    color: #1769aa;
+}
+
+.hero p {
+    margin-top: 25px;
+
+    color: #687580;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+.hero-botoes {
+    display: flex;
+    gap: 15px;
+
+    margin-top: 35px;
+}
+
+.btn-principal {
+    padding: 14px 25px;
+}
+
+.btn-secundario {
+    display: flex;
+    align-items: center;
+
+    padding: 14px 25px;
+
+    border: 1px solid #1769aa;
+
+    color: #1769aa;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+}
+
+
+/* ================= SLIDER ================= */
+
+.slider {
+    height: 420px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.18);
+}
+
+.slide {
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0;
+
+    transition: opacity .7s ease;
+}
+
+.slide.ativo {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* BOTÕES SLIDER */
+
+.slider-btn {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.85);
+
+    color: #1769aa;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    z-index: 5;
+}
+
+.anterior {
+    left: 15px;
+}
+
+.seguinte {
+    right: 15px;
+}
+
+
+/* INDICADORES */
+
+.indicadores {
+    position: absolute;
+
+    bottom: 18px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 8px;
+}
+
+.indicador {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    opacity: .6;
+
+    cursor: pointer;
+}
+
+.indicador.ativo {
+    width: 25px;
+
+    border-radius: 10px;
+
+    opacity: 1;
+
+    background: #1769aa;
+}
+
+
+/* ================= SERVIÇOS ================= */
+
+.servicos {
+    padding: 80px 6%;
+
+    background: white;
+}
+
+.titulo-secao {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.titulo-secao span {
+    color: #1769aa;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.titulo-secao h2 {
+    margin-top: 10px;
+
+    font-size: 35px;
+
+    color: #172b3a;
+}
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.card {
+    padding: 30px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e9ed;
+
+    border-radius: 18px;
+
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.1);
+}
+
+.icone {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #e7f1f9;
+
+    font-size: 25px;
+}
+
+.card h3 {
+    margin-top: 20px;
+
+    color: #243746;
+}
+
+.card p {
+    margin-top: 10px;
+
+    color: #74818c;
+
+    line-height: 1.6;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 25px 6%;
+
+    display: flex;
+    justify-content: space-between;
+
+    background: #172b3a;
+
+    color: white;
+
+    font-size: 13px;
+}
+
+
+/* ================= MODAL ================= */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0,0,0,.65);
+
+    backdrop-filter: blur(5px);
+
+    z-index: 1000;
+
+    padding: 20px;
+}
+
+.modal.ativo {
+    display: flex;
+}
+
+
+/* ================= LOGIN ================= */
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.25);
+
+    position: relative;
+
+    animation: aparecer .3s ease;
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(-25px) scale(.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+.fechar {
+    position: absolute;
+
+    right: 18px;
+    top: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f0f2f4;
+
+    color: #555;
+
+    font-size: 23px;
+
+    cursor: pointer;
+}
+
+.login-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.login-logo {
+    width: 60px;
+    height: 60px;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: #e7f1f9;
+
+    font-size: 28px;
+}
+
+.login-header h2 {
+    margin-top: 15px;
+
+    color: #172b3a;
+}
+
+.login-header p {
+    margin-top: 7px;
+
+    color: #7b8790;
+
+    font-size: 14px;
+}
+
+
+/* CAMPOS */
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #34495e;
+}
+
+.campo input {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 14px;
+
+    border: 1px solid #d9dfe4;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    transition: .3s;
+}
+
+.campo input:focus {
+    border-color: #1769aa;
+
+    box-shadow:
+        0 0 0 3px rgba(23,105,170,.12);
+}
+
+
+/* SENHA */
+
+.senha {
+    position: relative;
+}
+
+.senha input {
+    padding-right: 50px;
+}
+
+.senha button {
+    position: absolute;
+
+    right: 5px;
+    top: 5px;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+
+/* OPÇÕES */
+
+.opcoes {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+    font-size: 12px;
+
+    color: #697680;
+}
+
+.opcoes a {
+    color: #1769aa;
+
+    text-decoration: none;
+}
+
+
+/* BOTÃO ENTRAR */
+
+.btn-entrar {
+    width: 100%;
+
+    height: 48px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+
+/* MENSAGEM */
+
+.mensagem {
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-size: 13px;
+}
+
+
+/* FOOTER LOGIN */
+
+.login-footer {
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: #7b8790;
+
+    font-size: 13px;
+}
+
+.login-footer a {
+    color: #1769aa;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        padding-top: 50px;
+    }
+
+    .hero-conteudo {
+        text-align: center;
+
+        margin: auto;
+    }
+
+    .hero-botoes {
+        justify-content: center;
+    }
+
+    .slider {
+        height: 350px;
+    }
+
+    .cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .topo {
+        height: 65px;
+
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+
+    .logo span {
+        font-size: 24px;
+    }
+
+    .menu a {
+        display: none;
+    }
+
+    .btn-login {
+        padding: 9px 16px;
+    }
+
+    .hero {
+        padding: 45px 20px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .hero-botoes {
+        flex-direction: column;
+    }
+
+    .btn-principal,
+    .btn-secundario {
+        justify-content: center;
+    }
+
+    .slider {
+        height: 280px;
+
+        border-radius: 18px;
+    }
+
+    .servicos {
+        padding: 60px 20px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 27px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+    }
+
+    .login-container {
+        padding: 28px 22px;
+    }
+
+}
+
+
+</style>
